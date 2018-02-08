@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    //動態
     MyReceiver receiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
