@@ -9,7 +9,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     //動態
-    MyReceiver receiver;
+    static MyReceiver receiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         receiver = new MyReceiver();
     }
 
-    //註冊receiver
+    //註冊自己的receiver
     public void click01(View v) {
         IntentFilter filter = new IntentFilter();
         filter.addAction("myaction");
@@ -28,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     //取消receiver
     public void click02(View v) {
-        unregisterReceiver(receiver);
-        Log.d("MainActivity:","取消recivier");
+
+            unregisterReceiver(receiver);
+            Log.d("MainActivity:", "取消recivier");
+
     }
 
     //寄出訊號
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity:","寄出訊號");
     }
 
-    //監聽螢幕是否打開
+    //監聽螢幕打開
     public void click04(View v) {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_ON);

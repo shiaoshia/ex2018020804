@@ -12,6 +12,6 @@ public class MyReceiver extends BroadcastReceiver {
         // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
         //throw new UnsupportedOperationException("Not yet implemented");
-        Log.d("MyReceiver","onReceive接收訊號");
+        Log.d("MyReceiver","onReceive接收訊號1");
     }
 }
